@@ -85,7 +85,7 @@ const IC = {
   moon:'M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z', pause:'M6 4h4v16H6z M14 4h4v16h-4z',
 };
 const ic = (n, cls='') => `<svg class="ic ${cls}" viewBox="0 0 24 24" aria-hidden="true"><path d="${IC[n]||''}"/></svg>`;
-const CREST = (s=32) => `<svg width="${s}" height="${s}" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 4h24v12c0 7-6 11.5-12 13C10 27.5 4 23 4 16z" fill="var(--brick)"/><path d="M8 10h16M8 14h16M8 18h16M11 7v16M16 7v19M21 7v16" stroke="#fff" stroke-opacity=".55" stroke-width="1.4" fill="none"/><path d="M4 4h24v12c0 7-6 11.5-12 13C10 27.5 4 23 4 16z" fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="1.5"/></svg>`;
+const CREST = (s=32) => `<svg width="${s}" height="${s}" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 4h24v12c0 7-6 11.5-12 13C10 27.5 4 23 4 16z" fill="#CFB87C"/><path d="M4 10.5h24v3.6H4z M4.3 18h23.4c-.3 1.3-.8 2.5-1.5 3.6H5.8c-.7-1.1-1.2-2.3-1.5-3.6z" fill="#000"/><path d="M4 4h24v12c0 7-6 11.5-12 13C10 27.5 4 23 4 16z" fill="none" stroke="#FFFFF2" stroke-opacity=".9" stroke-width="1.3"/></svg>`;
 
 /* ---------- reference data ---------- */
 const COURSES = [
@@ -103,17 +103,17 @@ const COURSES = [
 ];
 const CO = Object.fromEntries(COURSES.map(c=>[c.id,c]));
 const PROFS = {
-  sato:{name:'Ingrid Sato',title:'Associate Professor',dept:'Mathematics',office:'COR 214',email:'isato@ashgrove.edu',hours:[{d:'M',s:840,e:960},{d:'R',s:600,e:690}]},
-  vasquez:{name:'Maren Vasquez',title:'Assistant Professor',dept:'English',office:'FEN 318',email:'mvasquez@ashgrove.edu',hours:[{d:'T',s:780,e:900},{d:'W',s:570,e:630}]},
-  brennan:{name:'Nadia Brennan',title:'Professor',dept:'Psychology',office:'HAL 204',email:'nbrennan@ashgrove.edu',hours:[{d:'T',s:630,e:720},{d:'F',s:780,e:840}]},
-  marsh:{name:'Owen Marsh',title:'Associate Professor',dept:'Geography & Environment',office:'FEN 210',email:'omarsh@ashgrove.edu',hours:[{d:'W',s:900,e:1020}]},
-  langford:{name:'Theo Langford',title:'Professor',dept:'Leadership Studies',office:'ASH 312',email:'tlangford@ashgrove.edu',hours:[{d:'M',s:600,e:690},{d:'R',s:900,e:960}]},
-  okafor:{name:'Delia Okafor',title:'Associate Professor',dept:'Accounting',office:'ASH 230',email:'dokafor@ashgrove.edu',hours:[{d:'W',s:780,e:900}]},
-  whitfield:{name:'Grace Whitfield',title:'Assistant Professor',dept:'Economics',office:'ASH 241',email:'gwhitfield@ashgrove.edu',hours:[{d:'T',s:840,e:960}]},
-  hirsch:{name:'Samuel Hirsch',title:'Professor',dept:'Biology',office:'COR 120',email:'shirsch@ashgrove.edu',hours:[{d:'M',s:780,e:870},{d:'W',s:780,e:870}]},
-  reyes:{name:'Callum Reyes',title:'Associate Professor',dept:'History',office:'FEN 124',email:'creyes@ashgrove.edu',hours:[{d:'F',s:600,e:720}]},
-  mehta:{name:'Arjun Mehta',title:'Assistant Professor',dept:'Computer Science',office:'COR 318',email:'amehta@ashgrove.edu',hours:[{d:'T',s:600,e:720},{d:'R',s:600,e:660}]},
-  kovac:{name:'Elena Kovac',title:'Professor',dept:'Music',office:'ART 204',email:'ekovac@ashgrove.edu',hours:[{d:'W',s:660,e:780}]},
+  sato:{name:'Ingrid Sato',title:'Associate Professor',dept:'Mathematics',office:'COR 214',email:'isato@weaver.edu',hours:[{d:'M',s:840,e:960},{d:'R',s:600,e:690}]},
+  vasquez:{name:'Maren Vasquez',title:'Assistant Professor',dept:'English',office:'FEN 318',email:'mvasquez@weaver.edu',hours:[{d:'T',s:780,e:900},{d:'W',s:570,e:630}]},
+  brennan:{name:'Nadia Brennan',title:'Professor',dept:'Psychology',office:'HAL 204',email:'nbrennan@weaver.edu',hours:[{d:'T',s:630,e:720},{d:'F',s:780,e:840}]},
+  marsh:{name:'Owen Marsh',title:'Associate Professor',dept:'Geography & Environment',office:'FEN 210',email:'omarsh@weaver.edu',hours:[{d:'W',s:900,e:1020}]},
+  langford:{name:'Theo Langford',title:'Professor',dept:'Leadership Studies',office:'ASH 312',email:'tlangford@weaver.edu',hours:[{d:'M',s:600,e:690},{d:'R',s:900,e:960}]},
+  okafor:{name:'Delia Okafor',title:'Associate Professor',dept:'Accounting',office:'ASH 230',email:'dokafor@weaver.edu',hours:[{d:'W',s:780,e:900}]},
+  whitfield:{name:'Grace Whitfield',title:'Assistant Professor',dept:'Economics',office:'ASH 241',email:'gwhitfield@weaver.edu',hours:[{d:'T',s:840,e:960}]},
+  hirsch:{name:'Samuel Hirsch',title:'Professor',dept:'Biology',office:'COR 120',email:'shirsch@weaver.edu',hours:[{d:'M',s:780,e:870},{d:'W',s:780,e:870}]},
+  reyes:{name:'Callum Reyes',title:'Associate Professor',dept:'History',office:'FEN 124',email:'creyes@weaver.edu',hours:[{d:'F',s:600,e:720}]},
+  mehta:{name:'Arjun Mehta',title:'Assistant Professor',dept:'Computer Science',office:'COR 318',email:'amehta@weaver.edu',hours:[{d:'T',s:600,e:720},{d:'R',s:600,e:660}]},
+  kovac:{name:'Elena Kovac',title:'Professor',dept:'Music',office:'ART 204',email:'ekovac@weaver.edu',hours:[{d:'W',s:660,e:780}]},
 };
 const BLD = {
   FEN:{name:'Fenwick Hall',kind:'Humanities classrooms & seminar rooms',pts:[[40,70],[190,70],[190,150],[40,150]],door:[190,112],via:'Q5',lbl:['FENWICK','HALL'],floors:3,hours:'7:00 AM – 11:00 PM'},
@@ -128,7 +128,7 @@ const BLD = {
   SAF:{name:'Campus Safety',kind:'24/7 dispatch, lost & found',pts:[[548,545],[592,545],[592,605],[548,605]],door:[570,545],via:'L1',lbl:['SAFETY'],floors:1,hours:'Open 24/7'},
   LRH:{name:'Larch Hall',kind:'First-year residence hall',pts:[[30,670],[140,670],[140,760],[30,760]],door:[85,670],via:'R85',lbl:['LARCH','HALL'],floors:4,hours:'Residents only'},
   KES:{name:'Kestrel Hall',kind:'First-year residence hall',pts:[[165,670],[285,670],[285,760],[165,760]],door:[225,670],via:'R225',lbl:['KESTREL','HALL'],floors:4,hours:'Residents only'},
-  WEL:{name:'Ashgrove Wellness Center',kind:'Health, counseling, recreation',pts:[[320,665],[500,665],[500,760],[410,760],[410,720],[320,720]],door:[410,665],via:'R410',lbl:['WELLNESS','CENTER'],lblAt:[455,698],floors:2,hours:'6:00 AM – 11:00 PM'},
+  WEL:{name:'weaver Wellness Center',kind:'Health, counseling, recreation',pts:[[320,665],[500,665],[500,760],[410,760],[410,720],[320,720]],door:[410,665],via:'R410',lbl:['WELLNESS','CENTER'],lblAt:[455,698],floors:2,hours:'6:00 AM – 11:00 PM'},
 };
 const DINING = {
   THN:{name:'Thornfield Dining Hall',bldg:'THN',swipes:true,periods:[['Breakfast',420,630],['Lunch',660,870],['Dinner',1020,1230]],
@@ -144,11 +144,11 @@ const DINING = {
 };
 const CLUBS = [
   {id:'debate',name:'Debate Union',cat:'Academic',members:46,policy:'approval',meets:'Thursdays 7:00 PM · FEN 115',desc:'Parliamentary debate for every level. We travel to six tournaments a year and run weekly practice rounds.'},
-  {id:'run',name:'Ashgrove Running Club',cat:'Sports',members:88,policy:'open',meets:'Mon/Wed 6:30 AM · Lake loop',desc:'Easy group runs around Wren Lake and longer weekend routes on the river trails. All paces welcome.'},
+  {id:'run',name:'weaver Running Club',cat:'Sports',members:88,policy:'open',meets:'Mon/Wed 6:30 AM · Lake loop',desc:'Easy group runs around Wren Lake and longer weekend routes on the river trails. All paces welcome.'},
   {id:'film',name:'Film Society',cat:'Arts',members:63,policy:'open',meets:'Fridays 9:00 PM · Larch Commons',desc:'Weekly screenings, a spring short-film festival, and equipment you can borrow for your own projects.'},
   {id:'cook',name:'Cooking Collective',cat:'Social',members:34,policy:'approval',meets:'Sundays 5:00 PM · Kestrel Hall kitchen',desc:'Members cook a shared dinner each week on a rotating theme. Space in the kitchen is limited, so we review requests.'},
   {id:'mun',name:'Model United Nations',cat:'Academic',members:52,policy:'approval',meets:'Tuesdays 8:00 PM · ASH 205',desc:'Prepare for regional conferences, write position papers, and represent countries in committee.'},
-  {id:'invest',name:'Weaver Investment Fund',cat:'Career',members:41,policy:'approval',meets:'Wednesdays 6:00 PM · ASH 110',desc:'A student-managed portfolio. First-years join as analysts and pitch one stock per semester.'},
+  {id:'invest',name:'Yellow Jacket Investment Fund',cat:'Career',members:41,policy:'approval',meets:'Wednesdays 6:00 PM · ASH 110',desc:'A student-managed portfolio. First-years join as analysts and pitch one stock per semester.'},
   {id:'notes',name:'The Lakeside Notes',cat:'Arts',members:16,policy:'approval',meets:'Mon/Thu 8:00 PM · ART 101',desc:'Co-ed a cappella. Auditions each fall and spring.'},
   {id:'outdoor',name:'Outdoor Adventure Club',cat:'Sports',members:120,policy:'open',meets:'Trips most weekends',desc:'Kayaking on the river, Blue Ridge hikes, and climbing nights. Gear is free to borrow.'},
   {id:'robotics',name:'Robotics Lab',cat:'Academic',members:29,policy:'open',meets:'Saturdays 1:00 PM · COR 330',desc:'Build autonomous robots for spring competitions. No experience needed.'},
@@ -177,13 +177,13 @@ const HEALTH = [
   {id:'chap',name:'Office of the Chaplaincy',short:'Chaplaincy',where:'CHP',floor:'Lower level',hours:'Mon–Fri 9:00 AM – 5:00 PM',phone:'(804) 555-0185',note:'Multifaith chaplains for pastoral care, grief support, and conversation.',appt:false},
 ];
 const DISCOUNTS = [
-  {name:'Canalside Coffee',cat:'Food',deal:'15% off any drink',code:'WEAVER15',where:'0.4 mi · Grove Ave'},
+  {name:'Canalside Coffee',cat:'Food',deal:'15% off any drink',code:'JACKETS15',where:'0.4 mi · Grove Ave'},
   {name:'Fan District Bikes',cat:'Transport',deal:'10% off tune-ups and helmets',code:'AGU10',where:'1.8 mi'},
-  {name:'Riverbend Cinema',cat:'Fun',deal:'$6 tickets every Tuesday',code:'Show Weaver ID',where:'2.3 mi'},
+  {name:'Riverbend Cinema',cat:'Fun',deal:'$6 tickets every Tuesday',code:'Show Jacket ID',where:'2.3 mi'},
   {name:'Lakeside Bookshop',cat:'Books',deal:'20% off used textbooks',code:'SPINE20',where:'On campus · LAR'},
-  {name:'FitRiver Climbing',cat:'Fun',deal:'No initiation fee, $45/month',code:'WEAVERCLIMB',where:'3.1 mi'},
-  {name:'Grove Pizza Co.',cat:'Food',deal:'Large pizza $10 Sun–Wed',code:'Show Weaver ID',where:'0.6 mi'},
-  {name:'Metro Transit',cat:'Transport',deal:'Free bus rides with Weaver ID',code:'Tap ID on reader',where:'Citywide'},
+  {name:'FitRiver Climbing',cat:'Fun',deal:'No initiation fee, $45/month',code:'JACKETCLIMB',where:'3.1 mi'},
+  {name:'Grove Pizza Co.',cat:'Food',deal:'Large pizza $10 Sun–Wed',code:'Show Jacket ID',where:'0.6 mi'},
+  {name:'Metro Transit',cat:'Transport',deal:'Free bus rides with Jacket ID',code:'Tap ID on reader',where:'Citywide'},
 ];
 const FEATURES = [
   [1,'Course schedule builder & LMS import','schedule',0],[2,'Assignment & exam tracker','deadlines',0],[3,'Deadline reminders & push','notif-settings',0],
@@ -197,7 +197,7 @@ const FEATURES = [
 ];
 
 /* ---------- state ---------- */
-const KEY='ashgrove-weave-v1';
+const KEY='weaver-campuslife-v2';
 function seed(){
   const now=Date.now();
   const s = {
@@ -228,12 +228,12 @@ function seed(){
       {id:'a2',title:'Spring 2027 registration opens Nov 10',body:'First-years register at 7:00 AM on Tuesday, Nov 10. Meet with your advisor by Nov 6 to get your registration PIN.',from:'Office of the Registrar',aud:'First-years',ts:now-26*3600000,reach:868},
     ],
     alerts:[
-      {id:'al1',sev:'advisory',title:'Walkway closed between Corrigan and Ashby',body:'Repaving through Nov 2. Use the lakeside path; it is lit and patrolled until 2 AM.',ts:now-5*3600000,active:true},
+      {id:'al1',sev:'advisory',title:'Walkway closed between Corrigan and Ashby',body:'Repaving for the next two weeks. Use the lakeside path; it is lit and patrolled until 2 AM.',ts:now-5*3600000,active:true},
       {id:'al2',sev:'info',title:'High winds expected Thursday',body:'Gusts up to 40 mph after noon. Secure bikes and avoid the boathouse dock.',ts:now-9*3600000,active:true},
       {id:'al3',sev:'resolved',title:'Power restored in Kestrel Hall',body:'All floors have power. Report any outages to Facilities.',ts:now-2*86400000,active:false},
     ],
     events:[
-      {id:'e1',title:'Weavers vs. Marlton College — Women’s Soccer',cat:'Athletics',start:at(1,16,0),end:at(1,18,0),bldg:'WEL',place:'Reese Field (behind Wellness Center)',host:'Ashgrove Athletics',cap:900,going:412,desc:'Conference play under the lights. First 200 students get a free scarf.'},
+      {id:'e1',title:'Yellow Jackets vs. Marlton College — Women’s Soccer',cat:'Athletics',start:at(1,16,0),end:at(1,18,0),bldg:'WEL',place:'Reese Field (behind Wellness Center)',host:'weaver Athletics',cap:900,going:412,desc:'Conference play under the lights. First 200 students get a free scarf.'},
       {id:'e2',title:'Lakeside Yoga on the North Lawn',cat:'Wellness',start:at(1,12,15),end:at(1,13,0),bldg:'WEL',place:'North lawn, Wellness Center',host:'Health Promotion',cap:60,going:41,desc:'A 45-minute flow for all levels. Mats provided.'},
       {id:'e3',title:'Internship Fair: Finance & Consulting',cat:'Career',start:at(2,13,0),end:at(2,16,0),bldg:'ASH',place:'Ashby Atrium',host:'Career Services',cap:400,going:233,desc:'Thirty firms recruiting for summer 2027. Bring printed résumés; first-years welcome.'},
       {id:'e4',title:'Debate Union Open Scrimmage',cat:'Clubs',club:'debate',start:at(2,19,0),end:at(2,21,0),bldg:'FEN',place:'FEN 115',host:'Debate Union',cap:50,going:22,desc:'Watch or jump in. Motion announced 15 minutes before rounds.'},
@@ -270,7 +270,7 @@ function seed(){
       {id:'p2',text:'Register at exactly 7:00 AM and have a backup section saved for every course. First-choice seats go in under two minutes.',tag:'Registration',by:'Sophomore · Biology',ts:now-4*86400000,votes:95},
       {id:'p3',text:'Thornfield’s stir-fry line is shortest between 12:40 and 1:00. Go then and you’ll make your 1:30.',tag:'Dining',by:'Senior · Leadership',ts:now-18*3600000,votes:61},
       {id:'p4',text:'Email your professor your question before office hours. They often bring a worked example.',tag:'Academics',by:'Junior · Economics',ts:now-3*86400000,votes:57},
-      {id:'p5',text:'The weekend shuttle downtown leaves Larch Commons at :15 and :45. Tap your Weaver ID.',tag:'Getting around',by:'Sophomore · Music',ts:now-6*86400000,votes:42},
+      {id:'p5',text:'The weekend shuttle downtown leaves Larch Commons at :15 and :45. Tap your Jacket ID.',tag:'Getting around',by:'Sophomore · Music',ts:now-6*86400000,votes:42},
       {id:'p6',text:'The Wellness Center lends kayaks for Wren Lake free on Sunday afternoons.',tag:'Wellness',by:'Senior · Geography',ts:now-9*3600000,votes:38},
     ],
     voted:{},
@@ -511,7 +511,7 @@ SCREENS.classes = {root:true, tab:'classes', title:'Classes', render(){
   const cr=enrolled().reduce((a,c)=>a+c.cr,0); const week=S.tasks.filter(t=>!t.done && t.due-Date.now()<7*86400000).length;
   const g=gpaCalc();
   return `<div class="pad"><div class="balance"><div><span>Credits</span><b>${cr}</b></div><div><span>Due this week</span><b>${week}</b></div><div><span>Term GPA</span><b>${g.term?g.term.toFixed(2):'—'}</b></div></div>
-  <div class="list">${row({icon:'cal',t:'Schedule builder',s:`${enrolled().length} courses · ${S.lms.connected?'synced with Ashgrove Learn':'import from Ashgrove Learn'}`,go:'schedule'})}
+  <div class="list">${row({icon:'cal',t:'Schedule builder',s:`${enrolled().length} courses · ${S.lms.connected?'synced with weaver Learn':'import from weaver Learn'}`,go:'schedule'})}
   ${row({icon:'list',t:'Deadlines',s:'Assignments, quizzes and exams',go:'deadlines'})}
   ${row({icon:'file',t:'Syllabus scanner',s:'Upload a syllabus, get the key dates',go:'syllabus'})}
   ${row({icon:'cap',t:'Grades & GPA',s:'Term and cumulative GPA, final exam calculator',go:'grades'})}
@@ -525,8 +525,8 @@ SCREENS.classes = {root:true, tab:'classes', title:'Classes', render(){
 SCREENS.schedule = {tab:'classes', title:'Schedule', render(){
   const list=enrolled(); const cr=list.reduce((a,c)=>a+c.cr,0); const clashes=list.filter(c=>conflictsOf(c).length);
   let h=`<div class="pad"><div class="sec-h"><div><span class="eyebrow">Fall 2026</span><div class="h2">${list.length} courses · ${cr} credits</div></div></div>`;
-  h+= S.lms.connected ? `<div class="card" style="flex-direction:row;align-items:center"><span class="ibox">${ic('link')}</span><div style="flex:1"><b>Ashgrove Learn connected</b><div class="small muted">Last synced ${ago(S.lms.synced)} ago</div></div><button type="button" class="btn sec sm" data-act="lmsSync">${ic('refresh','sm')}Sync</button></div>`
-    : `<button type="button" class="card" data-go="lms" style="flex-direction:row;align-items:center;text-align:left;width:100%;cursor:pointer"><span class="ibox brick">${ic('link')}</span><span style="flex:1"><b style="display:block">Import from Ashgrove Learn</b><span class="small muted">Pull in your registered courses and their assignments</span></span>${ic('right','sm')}</button>`;
+  h+= S.lms.connected ? `<div class="card" style="flex-direction:row;align-items:center"><span class="ibox">${ic('link')}</span><div style="flex:1"><b>weaver Learn connected</b><div class="small muted">Last synced ${ago(S.lms.synced)} ago</div></div><button type="button" class="btn sec sm" data-act="lmsSync">${ic('refresh','sm')}Sync</button></div>`
+    : `<button type="button" class="card" data-go="lms" style="flex-direction:row;align-items:center;text-align:left;width:100%;cursor:pointer"><span class="ibox brick">${ic('link')}</span><span style="flex:1"><b style="display:block">Import from weaver Learn</b><span class="small muted">Pull in your registered courses and their assignments</span></span>${ic('right','sm')}</button>`;
   if(clashes.length) h+=`<div class="alertbar crit">${ic('alert')}<span class="small"><b>Time conflict:</b> ${clashes.map(c=>c.code).join(' and ')} overlap. Drop one or pick another section.</span></div>`;
   h+=weekGrid();
   h+=`<div class="list">${list.map(c=>`<div class="row"><span class="cdot" style="${cc(c.id)};width:12px;height:36px;border-radius:4px"></span><span class="main"><span class="t" style="display:block">${c.code} · ${esc(c.title)}</span><span class="s" style="display:block">${c.days} ${hmr(c.start,c.end)} · ${c.room} · ${esc(PROFS[c.prof].name)} · ${c.cr} cr</span></span><button type="button" class="icbtn" data-act="dropCourse" data-id="${c.id}" aria-label="Drop ${c.code}">${ic('x','sm')}</button></div>`).join('')||'<p class="empty">No courses yet</p>'}</div>
@@ -549,11 +549,11 @@ SCREENS.catalog = {tab:'classes', title:'Add courses', render(){
     return `<div class="row"><span class="cdot" style="${cc(c.id)};width:10px;height:34px;border-radius:4px"></span><span class="main"><span class="t" style="display:block">${c.code} · ${esc(c.title)}</span><span class="s" style="display:block">${c.days} ${hmr(c.start,c.end)} · ${c.room} · ${c.cr} cr</span><span class="s" style="display:block">${esc(PROFS[c.prof].name)}${cf.length?` · <span style="color:var(--crit);font-weight:600">Conflicts with ${cf.map(x=>x.code).join(', ')}</span>`:''}</span></span>
     ${on?`<button type="button" class="btn sec sm" data-act="dropCourse" data-id="${c.id}">Added ${ic('check','sm')}</button>`:`<button type="button" class="btn sm" data-act="addCourse" data-id="${c.id}" ${cf.length?'disabled':''}>Add</button>`}</div>`; }).join('')}</div></div>`;
 }};
-SCREENS.lms = {tab:'classes', title:'Ashgrove Learn', render(){
+SCREENS.lms = {tab:'classes', title:'weaver Learn', render(){
   const st=UI.lms.step;
   const found=['FYS100','LDSP101','MATH211','ENGL103','PSYC100'];
-  if(st===0) return `<div class="pad"><div class="card"><span class="ibox brick">${ic('link')}</span><div class="h2">Connect your learning system</div><p class="small muted">Campus Life reads your registered courses and assignment due dates from Ashgrove Learn. It can’t see grades or submit work.</p><button type="button" class="btn block" data-act="lmsConnect">Sign in with Ashgrove ID</button><p class="tiny muted">Prototype: sign-in is simulated with demo data.</p></div></div>`;
-  if(st===1) return `<div class="pad"><div class="card" style="align-items:center;text-align:center;padding:32px 14px">${ic('refresh','lg')}<b>Reading your courses…</b><span class="small muted">Contacting Ashgrove Learn</span></div></div>`;
+  if(st===0) return `<div class="pad"><div class="card"><span class="ibox brick">${ic('link')}</span><div class="h2">Connect your learning system</div><p class="small muted">Campus Life reads your registered courses and assignment due dates from weaver Learn. It can’t see grades or submit work.</p><button type="button" class="btn block" data-act="lmsConnect">Sign in with weaver ID</button><p class="tiny muted">Prototype: sign-in is simulated with demo data.</p></div></div>`;
+  if(st===1) return `<div class="pad"><div class="card" style="align-items:center;text-align:center;padding:32px 14px">${ic('refresh','lg')}<b>Reading your courses…</b><span class="small muted">Contacting weaver Learn</span></div></div>`;
   const newOnes=found.filter(id=>!S.enrolled.includes(id));
   const nTasks=newOnes.filter(id=>UI.lms.pick[id]).length*2;
   return `<div class="pad"><p class="small muted">Found ${found.length} registered courses for Fall 2026. Courses already on your schedule are skipped.</p>
@@ -737,7 +737,7 @@ SCREENS.library = {tab:'classes', title:'Library study rooms', render(){
 
 /* 18. First-year checklist */
 const CHECK={
-  summer:[['s1','Accept your offer and pay the enrollment deposit','May 1','admissions'],['s2','Submit housing preferences','Jun 15'],['s3','Upload health forms and immunizations','Jul 15'],['s4','Take math and language placement exams','Jul 31'],['s5','Upload your Weaver ID photo','Aug 1'],['s6','Register for fall classes at orientation','Aug 14','schedule']],
+  summer:[['s1','Accept your offer and pay the enrollment deposit','May 1','admissions'],['s2','Submit housing preferences','Jun 15'],['s3','Upload health forms and immunizations','Jul 15'],['s4','Take math and language placement exams','Jul 31'],['s5','Upload your Jacket ID photo','Aug 1'],['s6','Register for fall classes at orientation','Aug 14','schedule']],
   fall:[['f1','Move in and attend Week of Welcome','Aug 21'],['f2','Confirm your meal plan','Sep 4','wallet'],['f3','Add/drop deadline','Sep 4','schedule'],['f4','Meet your academic advisor for your registration PIN','Nov 6'],['f5','Decide on any course withdrawals (last day for a W)','Nov 6','grades'],['f6','Build a spring schedule with backup sections','Nov 8','schedule'],['f7','Register for spring classes at 7:00 AM','Nov 10','schedule'],['f8','Get a free flu shot at the Health Center','Nov 20','health'],['f9','File the 2027–28 FAFSA and CSS Profile (priority)','Dec 1'],['f10','Check out of your residence hall for winter break','Dec 18']],
   spring:[['p1','Return for spring move-in','Jan 17'],['p2','Sophomore housing application','Feb 12'],['p3','Room selection lottery','Mar 19'],['p4','Renew financial aid documents','Apr 15'],['p5','Sign up for summer storage','Apr 23'],['p6','Plan sophomore fall registration','Apr 6','schedule']],
 };
@@ -756,7 +756,7 @@ SCREENS.campus = {root:true, tab:'campus', title:'Campus', render(){
   <div class="list">${row({icon:'cal',t:'Events',s:`${S.events.filter(e=>e.end>Date.now()).length} upcoming on campus`,go:'events'})}
   ${row({icon:'map',t:'Campus map',s:'Find buildings and rooms',go:'map'})}
   ${row({icon:'fork',t:'Dining',s:'Menus, hours, what’s open now',go:'dining'})}
-  ${row({icon:'wallet',t:'Weaver Card',s:`${S.wallet.swipes} swipes · ${money(S.wallet.dd)} Dining Dollars`,go:'wallet'})}
+  ${row({icon:'wallet',t:'Jacket Card',s:`${S.wallet.swipes} swipes · ${money(S.wallet.dd)} Dining Dollars`,go:'wallet'})}
   ${row({icon:'shield',t:'Safety',s:active?`${active} active alert${active>1?'s':''}`:'No active alerts',go:'safety',box:active?'brick':''})}
   ${row({icon:'heart',t:'Health & counseling',s:'CAPS, Health Center, support services',go:'health'})}
   ${row({icon:'dollar',t:'Budget & discounts',s:'Track spending, local student deals',go:'budget'})}</div></div>`;
@@ -840,7 +840,7 @@ function bldgOpen(k){
   if(k==='THN'){ const s=diningStatus('THN'); return {open:s.open, text:s.open?`Open · ${s.label} until ${hm(s.until%1440)}`:s.next}; }
   if(/24\/7/.test(b.hours)) return {open:true,text:'Open 24 hours'};
   const m=b.hours.match(/(\d{1,2}):(\d{2}) (AM|PM) – (\d{1,2}):(\d{2}) (AM|PM)/);
-  if(!m) return {open:null,text:b.hours==='Residents only'?'Residents only · Weaver ID access':b.hours};
+  if(!m) return {open:null,text:b.hours==='Residents only'?'Residents only · Jacket ID access':b.hours};
   const toMin=(h,mi,ap)=>(+h%12+(ap==='PM'?12:0))*60+ +mi; const a=toMin(m[1],m[2],m[3]); let z=toMin(m[4],m[5],m[6]); if(z<=a) z+=1440;
   const n=new Date(); const now=n.getHours()*60+n.getMinutes(); const open=(now>=a&&now<z)||(now+1440<z);
   return {open, text:`${open?'Open today':'Closed now'} · ${hm(a)}–${hm(z%1440)}`};
@@ -881,7 +881,7 @@ addEventListener('resize',()=>mapVB());
 const pin=(x,y,L,r=10)=>`<g class="mpin" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})"><circle r="${r}" style="fill:${L.color}"/><g transform="translate(${-r*.62} ${-r*.62}) scale(${r*.052})"><path d="${IC[L.icon]}"/></g></g>`;
 function mapSVG(){
   const M=UI.map; const sel=M.sel; const ring=(cx,cy,rx,ry)=>`<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}"`;
-  let s=`<svg id="cmap" role="img" aria-label="Map of Ashgrove University campus. Drag to pan." viewBox="0 0 600 800" preserveAspectRatio="xMidYMid meet">
+  let s=`<svg id="cmap" role="img" aria-label="Map of weaver University campus. Drag to pan." viewBox="0 0 600 800" preserveAspectRatio="xMidYMid meet">
   <defs><pattern id="mgrid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" class="mg-line"/></pattern></defs>
   <rect x="-400" y="-400" width="1400" height="1700" class="mg-ground"/><rect x="-400" y="-400" width="1400" height="1700" fill="url(#mgrid)"/>
   <rect x="525" y="672" width="150" height="160" class="mfield"/><path d="M525 752h150 M600 672v160" class="mfield-l"/><text x="575" y="716" class="mlbl">REESE</text><text x="575" y="728" class="mlbl">FIELD</text>
@@ -966,7 +966,7 @@ SCREENS.building = {tab:'campus', title:p=>BLD[p.id]?.name||'Building', render(p
   const offices=Object.entries(PROFS).filter(([,pr])=>bldgOf(pr.office)===k);
   const rooms=[...COURSES.filter(c=>bldgOf(c.room)===k).map(c=>[c.room.slice(4),`${c.code} classroom`]),...offices.map(([,pr])=>[pr.office.slice(4),`Office of ${pr.name}`])].sort((a,b)=>a[0].localeCompare(b[0]));
   const svc=HEALTH.filter(h=>h.where===k), din=Object.entries(DINING).filter(([,d])=>d.bldg===k), evs=S.events.filter(e=>e.bldg===k&&e.end>Date.now()).sort((a,b)=>a.start-b.start).slice(0,3);
-  const extra={LIB:['Book a study room','library','door'],SAF:['Request a Safe Walk','safewalk','walk'],WEL:['Health & counseling services','health','heart'],ASH:['Career Center job board','jobs','brief'],THN:['Today’s menu','dining','fork'],LAR:['Pay with Weaver Card','wallet','wallet']}[k];
+  const extra={LIB:['Book a study room','library','door'],SAF:['Request a Safe Walk','safewalk','walk'],WEL:['Health & counseling services','health','heart'],ASH:['Career Center job board','jobs','brief'],THN:['Today’s menu','dining','fork'],LAR:['Pay with Jacket Card','wallet','wallet']}[k];
   return `<div class="pad"><div><span class="eyebrow">${k} · ${B.floors} floor${B.floors>1?'s':''}</span><h1 class="h-display" style="margin-top:4px">${esc(B.name)}</h1><p class="muted" style="margin-top:4px">${esc(B.kind)}</p></div>
   <div class="card"><div class="sec-h"><span style="font-weight:600">${esc(st.text)}</span>${st.open==null?'<span class="pill">Residents</span>':`<span class="pill ${st.open?'ok':'crit'}">${st.open?'Open now':'Closed'}</span>`}</div><div class="small muted">${r.min} min walk · ${r.m} m from you at Larch Commons</div>
   <div class="btns"><button type="button" class="btn" style="flex:1" data-act="bMap" data-id="${k}" data-dir="1">${ic('nav','sm')}Directions</button><button type="button" class="btn sec" style="flex:1" data-act="bMap" data-id="${k}">${ic('map','sm')}Show on map</button></div></div>
@@ -977,7 +977,7 @@ SCREENS.building = {tab:'campus', title:p=>BLD[p.id]?.name||'Building', render(p
   ${evs.length?`${secH('Upcoming here')}<div class="list">${evs.map(evRow).join('')}</div>`:''}
   ${offices.length?`${secH('Faculty offices')}<div class="list">${offices.map(([id,pr])=>`<button type="button" class="row" data-go="prof" data-id="${id}"><span class="av" style="--cc:var(--c${(hash(id)%6)+1})">${initials(pr.name)}</span><span class="main"><span class="t" style="display:block">${esc(pr.name)}</span><span class="s" style="display:block">${esc(pr.dept)} · room ${pr.office.slice(4)}</span></span><span class="chev">${ic('right','sm')}</span></button>`).join('')}</div>`:''}
   ${rooms.length?`${secH('Room directory')}<div class="list">${rooms.map(([rm,t])=>`<button type="button" class="row" data-act="roomPick" data-id="${k} ${rm}"><span class="code">${rm}</span><span class="main"><span class="t" style="display:block">${esc(t)}</span><span class="s" style="display:block">Floor ${rm[0]}</span></span>${ic('pin','sm')}</button>`).join('')}</div>`:''}
-  <div class="card"><span class="eyebrow">Getting in</span><p class="small">Step-free entrance at the main door, facing the path. ${B.floors>1?'The elevator is just inside the main entrance.':'Single-level building.'} ${/Residents/.test(B.hours)?'Residents tap their Weaver ID at the front door; guests must be signed in.':''}</p></div></div>`;
+  <div class="card"><span class="eyebrow">Getting in</span><p class="small">Step-free entrance at the main door, facing the path. ${B.floors>1?'The elevator is just inside the main entrance.':'Single-level building.'} ${/Residents/.test(B.hours)?'Residents tap their Jacket ID at the front door; guests must be signed in.':''}</p></div></div>`;
 }};
 
 /* 25–26. Job board & alumni network */
@@ -987,10 +987,10 @@ const JOBS=[
   {id:'j3',title:'Summer Analyst Intern',employer:'Northbank Capital',type:'Internship',loc:'Richmond, VA · hybrid',pay:'$28/hr',hours:'Full-time, June–August 2027',due:at(9,23,59),fy:false,who:'Sophomores and juniors; all majors',alum:'jordan',tags:['finance','investing','analyst'],desc:'Join the middle-market banking team for ten weeks. Analysts build company profiles, help with valuation models and present a final deal case.',does:['Build company and industry profiles','Support valuation models and pitch materials','Present a capstone deal case to senior bankers']},
   {id:'j4',title:'Marketing & Social Media Intern',employer:'Canal Street Media',type:'Internship',loc:'Remote',pay:'$17/hr',hours:'10–12 hrs/week, spring semester',due:at(14,23,59),fy:true,who:'All class years',alum:'ben',tags:['media','marketing','film','social'],desc:'Help a small documentary studio plan and post content for its spring releases.',does:['Draft posts and cut short videos','Track engagement and report weekly','Help plan a spring screening tour']},
   {id:'j5',title:'Research Assistant, Cognition Lab',employer:'Department of Psychology',type:'On-campus',loc:'Halloway Hall',pay:'$15/hr',hours:'6–8 hrs/week',due:at(6,17,0),fy:true,who:'Students who have taken or are taking PSYC 100',tags:['research','psychology','lab'],desc:'Run participant sessions and code data for Prof. Nadia Brennan’s memory and attention studies.',does:['Schedule and run study sessions','Enter and check data','Attend the weekly lab meeting']},
-  {id:'j6',title:'Summer Program Intern',employer:'River City Food Collective',type:'Internship',loc:'Richmond, VA',pay:'$3,500 summer stipend',hours:'Full-time, 9 weeks',due:at(20,23,59),fy:true,who:'All class years; funded by the Ashgrove Summer Fellowship',alum:'lucia',tags:['nonprofit','community','food','volunteering','cooking'],desc:'Coordinate weekly food distribution, manage volunteers and help run a neighborhood food-access survey.',does:['Coordinate volunteers at two distribution sites','Track inventory and deliveries','Help analyze the food-access survey']},
+  {id:'j6',title:'Summer Program Intern',employer:'River City Food Collective',type:'Internship',loc:'Richmond, VA',pay:'$3,500 summer stipend',hours:'Full-time, 9 weeks',due:at(20,23,59),fy:true,who:'All class years; funded by the weaver Summer Fellowship',alum:'lucia',tags:['nonprofit','community','food','volunteering','cooking'],desc:'Coordinate weekly food distribution, manage volunteers and help run a neighborhood food-access survey.',does:['Coordinate volunteers at two distribution sites','Track inventory and deliveries','Help analyze the food-access survey']},
   {id:'j7',title:'Software Engineering Intern',employer:'Fall Line Software',type:'Internship',loc:'Washington, DC',pay:'$35/hr',hours:'Full-time, summer 2027',due:at(18,23,59),fy:false,who:'Sophomores and juniors who have taken CMSC 221',alum:'renee',tags:['tech','software','programming','robotics'],desc:'Ship features with a team that builds scheduling tools for city transit agencies.',does:['Pair with a mentor engineer','Ship two features to production','Present at intern demo day']},
   {id:'j8',title:'Weekend Barista',employer:'Canalside Coffee',type:'Part-time',loc:'Grove Ave · 0.4 mi from campus',pay:'$13/hr + tips',hours:'Saturday and Sunday mornings',due:null,fy:true,who:'Anyone; no experience needed',tags:['food','coffee','service'],desc:'Make drinks and keep the café running on weekend mornings. Training provided.',does:['Prepare espresso drinks','Run the register','Open the café at 7 AM']},
-  {id:'j9',title:'Admission Tour Guide',employer:'Office of Admission',type:'On-campus',loc:'Larch Commons',pay:'$14/hr',hours:'3–5 tours a week',due:at(25,17,0),fy:true,who:'All students in good academic standing',tags:['speaking','admission','leadership'],desc:'Lead prospective students and families around campus and share your own Ashgrove story.',does:['Lead 60-minute walking tours','Staff open-house weekends','Host overnight visitors twice a semester']},
+  {id:'j9',title:'Admission Tour Guide',employer:'Office of Admission',type:'On-campus',loc:'Larch Commons',pay:'$14/hr',hours:'3–5 tours a week',due:at(25,17,0),fy:true,who:'All students in good academic standing',tags:['speaking','admission','leadership'],desc:'Lead prospective students and families around campus and share your own weaver story.',does:['Lead 60-minute walking tours','Staff open-house weekends','Host overnight visitors twice a semester']},
   {id:'j10',title:'Associate Consultant',employer:'Harrow & Pine Consulting',type:'Full-time',loc:'New York, NY',pay:'$90,000 + bonus',hours:'Full-time, starting July 2027',due:at(30,23,59),fy:false,who:'Graduating seniors (Class of 2027)',alum:'marcus',tags:['consulting','strategy','debate'],desc:'Work on strategy projects for healthcare and education clients in case teams of three to five.',does:['Research markets and interview experts','Build analyses and client presentations','Present findings to client teams']},
 ];
 const JOB=Object.fromEntries(JOBS.map(j=>[j.id,j]));
@@ -1048,7 +1048,7 @@ SCREENS.job = {tab:'connect', title:p=>JOB[p.id]?.employer||'Job', render(p){
   <dl class="kv card"><dt>Pay</dt><dd>${esc(j.pay)}</dd><dt>Hours</dt><dd>${esc(j.hours)}</dd><dt>Location</dt><dd>${esc(j.loc)}</dd><dt>Apply by</dt><dd>${j.due?`${fWhen(j.due)} <span class="pill ${dd.c}">${dd.t}</span>`:'Rolling, open until filled'}</dd><dt>Who can apply</dt><dd>${esc(j.who)}</dd></dl>
   <p>${esc(j.desc)}</p>
   <div class="card"><span class="eyebrow">What you’ll do</span><ul class="small" style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px">${j.does.map(d=>`<li>${esc(d)}</li>`).join('')}</ul></div>
-  ${al?`<button type="button" class="card" data-go="alum" data-id="${al.id}" style="flex-direction:row;align-items:center;text-align:left;width:100%;cursor:pointer"><span class="av" style="--cc:var(--c${al.c})">${initials(al.name)}</span><span style="flex:1;min-width:0"><b style="display:block">${esc(al.name)} ${yr(al)} works here</b><span class="small muted">${esc(al.role)} · offers referrals to Ashgrove students</span></span>${ic('right','sm')}</button>`:''}
+  ${al?`<button type="button" class="card" data-go="alum" data-id="${al.id}" style="flex-direction:row;align-items:center;text-align:left;width:100%;cursor:pointer"><span class="av" style="--cc:var(--c${al.c})">${initials(al.name)}</span><span style="flex:1;min-width:0"><b style="display:block">${esc(al.name)} ${yr(al)} works here</b><span class="small muted">${esc(al.role)} · offers referrals to weaver students</span></span>${ic('right','sm')}</button>`:''}
   ${a?'':`<button type="button" class="btn block" data-go="apply" data-id="${j.id}" ${dd.t==='Closed'?'disabled':''}>Apply with my profile</button>`}
   <div class="btns"><button type="button" class="btn sec" style="flex:1" data-act="jobSave" data-id="${j.id}">${ic('bookmark',sv?'sm filled':'sm')}${sv?'Saved':'Save'}</button>${j.due&&!a?`<button type="button" class="btn sec" style="flex:1" data-act="jobTrack" data-id="${j.id}">${ic('clock','sm')}Add to deadlines</button>`:''}</div></div>`;
 }};
@@ -1065,7 +1065,7 @@ SCREENS.alumni = {tab:'connect', title:'Alumni network', render(){
   const q=(UI.alumQ||'').toLowerCase();
   const list=ALUMNI.map(a=>({a,r:alumReasons(a)})).filter(({a})=>(UI.alumInd==='All'||a.ind===UI.alumInd)&&(!UI.alumOpen||a.open)&&(!q||(a.name+' '+a.company+' '+a.role+' '+a.major+' '+a.city).toLowerCase().includes(q))).sort((x,y)=>y.r.length-x.r.length||y.a.year-x.a.year);
   const chats=Object.entries(S.coffee).map(([id,c])=>({a:ALUM[id],c})).filter(x=>x.a);
-  return `<div class="pad"><p class="small muted">${ALUMNI.length} Weavers who volunteered to help current students. Sorted by what you have in common.</p>
+  return `<div class="pad"><p class="small muted">${ALUMNI.length} Yellow Jacket alumni who volunteered to help current students. Sorted by what you have in common.</p>
   ${chats.length?`${secH('Your coffee chats')}<div class="list">${chats.map(({a,c})=>`<button type="button" class="row" data-go="alum" data-id="${a.id}"><span class="av" style="--cc:var(--c${a.c})">${initials(a.name)}</span><span class="main"><span class="t" style="display:block">${esc(a.name)} ${yr(a)}</span><span class="s" style="display:block">${c.status==='Accepted'&&c.when?`${fWhen(c.when)} · ${esc(c.fmt)}`:`${esc(c.topic)} · sent ${ago(c.ts)} ago`}</span></span>${appPill(c.status)}</button>`).join('')}</div>`:''}
   <div class="search">${ic('search')}<input id="alum-q" class="input" placeholder="Search name, company or major" value="${esc(UI.alumQ||'')}" data-in="alumQ" autocomplete="off"></div>
   ${chips('alumInd',['All','Finance','Consulting','Tech','Nonprofit','Healthcare','Law','Media'].map(x=>[x,x]))}
@@ -1077,7 +1077,7 @@ SCREENS.alum = {tab:'connect', title:p=>ALUM[p.id]?.name||'Alum', render(p){
   const r=alumReasons(a), c=S.coffee[a.id], jobs=JOBS.filter(j=>j.alum===a.id);
   return `<div class="pad"><div class="card" style="flex-direction:row;align-items:center;gap:14px"><span class="av lg" style="--cc:var(--c${a.c})">${initials(a.name)}</span><div style="min-width:0"><div class="h2">${esc(a.name)}</div><div class="small">${esc(a.role)}, ${esc(a.company)}</div><div class="small muted">Class of ${a.year} · ${esc(a.major)} · ${esc(a.city)}</div></div></div>
   ${r.length?`<div><div class="flabel" style="margin-bottom:6px">You have in common</div><div style="display:flex;gap:6px;flex-wrap:wrap">${r.map(x=>`<span class="pill brick">${esc(x)}</span>`).join('')}</div></div>`:''}
-  ${c?`<div class="card"><div class="sec-h"><span class="eyebrow">Coffee chat</span>${appPill(c.status)}</div><p class="small">${c.status==='Accepted'&&c.when?`<b>${fWhen(c.when)}</b> · ${esc(c.fmt)}<br>Topic: ${esc(c.topic)}. A calendar invite with the video link is in your Ashgrove email.`:`Sent ${ago(c.ts)} ago about ${esc(c.topic.toLowerCase())}. Alumni usually reply within a few days.`}</p></div>`
+  ${c?`<div class="card"><div class="sec-h"><span class="eyebrow">Coffee chat</span>${appPill(c.status)}</div><p class="small">${c.status==='Accepted'&&c.when?`<b>${fWhen(c.when)}</b> · ${esc(c.fmt)}<br>Topic: ${esc(c.topic)}. A calendar invite with the video link is in your weaver email.`:`Sent ${ago(c.ts)} ago about ${esc(c.topic.toLowerCase())}. Alumni usually reply within a few days.`}</p></div>`
     : a.open?`<button type="button" class="btn block" data-go="coffee" data-id="${a.id}">${ic('coffee','sm')}Request a coffee chat</button>`:`<div class="alertbar">${ic('clock')}<span class="small">${esc(a.name.split(' ')[0])} isn’t taking new chats this term. Career Services can pass along a message.</span></div>`}
   <div class="card"><span class="eyebrow">Can help with</span><div style="display:flex;gap:6px;flex-wrap:wrap">${a.helps.map(h=>`<span class="pill">${esc(h)}</span>`).join('')}</div></div>
   <div class="card"><span class="eyebrow">Career path</span><div class="steps">${a.path.map(([y,t],i)=>`<div class="step ${i===a.path.length-1?'cur':'done'}"><span class="dot">${i===a.path.length-1?'':ic('check')}</span><div><b>${esc(t)}</b><div class="small muted num">${y}</div></div></div>`).join('')}</div></div>
@@ -1089,7 +1089,7 @@ SCREENS.coffee = {tab:'connect', title:'Coffee chat', render(p){
   return `<form class="pad" data-form="coffee" data-id="${a.id}"><div class="card" style="flex-direction:row;align-items:center"><span class="av" style="--cc:var(--c${a.c})">${initials(a.name)}</span><div><b style="display:block">${esc(a.name)} ${yr(a)}</b><span class="small muted">${esc(a.role)}, ${esc(a.company)}</span></div></div>
   <div class="field"><label for="cf-topic">What would you like to talk about?</label><select id="cf-topic" name="topic" class="input">${a.helps.concat(['General career advice']).map(h=>`<option>${esc(h)}</option>`).join('')}</select></div>
   <div class="grid2"><div class="field"><label for="cf-fmt">Format</label><select id="cf-fmt" name="fmt" class="input"><option>Video call · 20 min</option><option>Phone · 20 min</option>${/Richmond/.test(a.city)?'<option>In person · coffee near campus</option>':''}</select></div><div class="field"><label for="cf-when">When works</label><select id="cf-when" name="when" class="input"><option>Weekday afternoons</option><option>Weekday evenings</option><option>Weekends</option></select></div></div>
-  <div class="field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="msg" class="input" style="min-height:120px">Hi ${esc(first)}, I’m a first-year at Ashgrove thinking about ${esc(a.ind.toLowerCase())}. Would you have 20 minutes to share how you got started at ${esc(a.company)}? Thank you!</textarea></div>
+  <div class="field"><label for="cf-msg">Message</label><textarea id="cf-msg" name="msg" class="input" style="min-height:120px">Hi ${esc(first)}, I’m a first-year at weaver thinking about ${esc(a.ind.toLowerCase())}. Would you have 20 minutes to share how you got started at ${esc(a.company)}? Thank you!</textarea></div>
   <button class="btn block" type="submit">Send request</button><p class="tiny muted" style="text-align:center">Alumni see your name, year, major and this message.</p></form>`;
 }};
 
@@ -1101,33 +1101,33 @@ SCREENS.dining = {tab:'campus', title:'Dining', render(){
   return `<div class="pad">${chips('dineLoc',Object.entries(DINING).map(([k,d])=>[k,d.name]))}
   <div class="card"><div class="sec-h"><div class="h2">${esc(L.name)}</div><span class="pill ${st.open?'ok':''}">${st.open?'Open now':'Closed'}</span></div>
   <dl class="kv">${L.periods.map(([l,a,b])=>`<dt>${l}</dt><dd class="num">${hmr(a,b%1440)}${b>1440?' (next day)':''}</dd>`).join('')}</dl>
-  <div class="small muted">${st.open?`Open until ${hm(st.until%1440)}`:st.next} · ${L.swipes?'Meal swipes, Dining Dollars, Weaver Cash':'Dining Dollars or Weaver Cash'}</div></div>
+  <div class="small muted">${st.open?`Open until ${hm(st.until%1440)}`:st.next} · ${L.swipes?'Meal swipes, Dining Dollars, Jacket Cash':'Dining Dollars or Jacket Cash'}</div></div>
   ${meals.length>1?`<div class="seg">${meals.map(m=>`<button type="button" class="${m===meal?'on':''}" data-act="ui" data-k="dineMeal" data-v="${m}">${m}</button>`).join('')}</div>`:''}
   ${chips('dineTag',[['','All'],['V','Vegetarian'],['VG','Vegan'],['GF','Gluten-free']])}
   <div class="list">${items.map(([n,t])=>`<div class="row"><span class="main"><span class="t" style="display:block">${esc(n)}</span></span>${t?t.split(' ').map(x=>`<span class="pill ${x==='GF'?'warn':'ok'}">${x}</span>`).join(''):''}</div>`).join('')||'<p class="empty">Nothing matches that filter.</p>'}</div>
   <p class="tiny muted">V vegetarian · VG vegan · GF made without gluten. Ask a chef about allergens.</p>
-  <button type="button" class="btn" data-go="pay" data-id="${UI.dineLoc}">${ic('wallet','sm')}Pay here with Weaver Card</button></div>`;
+  <button type="button" class="btn" data-go="pay" data-id="${UI.dineLoc}">${ic('wallet','sm')}Pay here with Jacket Card</button></div>`;
 }};
 
-/* 16. Weaver Card (dining payment) */
-SCREENS.wallet = {tab:'campus', title:'Weaver Card', render(){
-  const W=S.wallet; const A={swipes:'Meal swipe',dd:'Dining Dollars',cash:'Weaver Cash'};
-  return `<div class="pad"><div class="balance"><div><span>Meal swipes</span><b>${W.swipes}</b><span class="tiny muted">of ${W.swipesMax}</span></div><div><span>Dining $</span><b>${money(W.dd)}</b></div><div><span>Weaver Cash</span><b>${money(W.cash)}</b></div></div>
+/* 16. Jacket Card (dining payment) */
+SCREENS.wallet = {tab:'campus', title:'Jacket Card', render(){
+  const W=S.wallet; const A={swipes:'Meal swipe',dd:'Dining Dollars',cash:'Jacket Cash'};
+  return `<div class="pad"><div class="balance"><div><span>Meal swipes</span><b>${W.swipes}</b><span class="tiny muted">of ${W.swipesMax}</span></div><div><span>Dining $</span><b>${money(W.dd)}</b></div><div><span>Jacket Cash</span><b>${money(W.cash)}</b></div></div>
   <div class="btns"><button type="button" class="btn" style="flex:1" data-go="pay">${ic('wallet','sm')}Pay</button><button type="button" class="btn sec" style="flex:1" data-act="payQR">${ic('qr','sm')}Scan-to-pay code</button></div>
   ${UI.payQR?`<div class="card" style="align-items:center"><div class="qrbox" data-qr="${UI.payQR.code}"></div><span class="mono">${UI.payQR.code}</span><span class="small muted" id="qr-count">Refreshes in 30 s</span><p class="tiny muted" style="text-align:center">Hold up to the reader at any register. Charges Dining Dollars first.</p></div>`:''}
-  <div class="card"><span class="eyebrow">Add Weaver Cash</span><div class="btns">${[25,50,100].map(v=>`<button type="button" class="btn sec sm" data-act="addCash" data-v="${v}">+$${v}</button>`).join('')}</div><p class="tiny muted">Prototype: no real payment is taken. In the live app this opens the university’s payment processor.</p></div>
-  ${secH('Recent activity')}<div class="list">${W.txns.slice().sort((a,b)=>b.ts-a.ts).map(t=>row({icon:t.acct==='add'?'plus':'fork',t:esc(t.loc),s:`${fWhen(t.ts)} · ${A[t.acct]||'Weaver Cash deposit'}`,right:`<b class="num" style="${t.acct==='add'?'color:var(--ok)':''}">${t.acct==='swipes'?'1 swipe':(t.acct==='add'?'+':'−')+money(t.amt).replace('−','')}</b>`})).join('')}</div></div>`;
+  <div class="card"><span class="eyebrow">Add Jacket Cash</span><div class="btns">${[25,50,100].map(v=>`<button type="button" class="btn sec sm" data-act="addCash" data-v="${v}">+$${v}</button>`).join('')}</div><p class="tiny muted">Prototype: no real payment is taken. In the live app this opens the university’s payment processor.</p></div>
+  ${secH('Recent activity')}<div class="list">${W.txns.slice().sort((a,b)=>b.ts-a.ts).map(t=>row({icon:t.acct==='add'?'plus':'fork',t:esc(t.loc),s:`${fWhen(t.ts)} · ${A[t.acct]||'Jacket Cash deposit'}`,right:`<b class="num" style="${t.acct==='add'?'color:var(--ok)':''}">${t.acct==='swipes'?'1 swipe':(t.acct==='add'?'+':'−')+money(t.amt).replace('−','')}</b>`})).join('')}</div></div>`;
 }};
 SCREENS.pay = {tab:'campus', title:'Pay', render(p){
   if(p.id && !p._used){ UI.pay={step:'form',loc:p.id,amt:'',acct:DINING[p.id].swipes?'swipes':'dd'}; p._used=true; }
   const P=UI.pay; const L=DINING[P.loc]; const W=S.wallet;
-  if(P.step==='done') return `<div class="pad"><div class="card" style="align-items:center;text-align:center;padding:28px 14px"><span class="chk on" style="width:56px;height:56px">${ic('check','lg')}</span><div class="h2">Paid</div><p>${P.acct==='swipes'?'1 meal swipe':money(+P.amt)} at ${esc(L.name)}</p><p class="small muted">${fWhen(Date.now())} · receipt saved to Weaver Card</p></div><button type="button" class="btn sec" data-act="payAgain">Done</button></div>`;
+  if(P.step==='done') return `<div class="pad"><div class="card" style="align-items:center;text-align:center;padding:28px 14px"><span class="chk on" style="width:56px;height:56px">${ic('check','lg')}</span><div class="h2">Paid</div><p>${P.acct==='swipes'?'1 meal swipe':money(+P.amt)} at ${esc(L.name)}</p><p class="small muted">${fWhen(Date.now())} · receipt saved to Jacket Card</p></div><button type="button" class="btn sec" data-act="payAgain">Done</button></div>`;
   const amt=+P.amt; const bal=P.acct==='swipes'?W.swipes:P.acct==='dd'?W.dd:W.cash;
   const ok = P.acct==='swipes' ? W.swipes>0 : (amt>0 && amt<=bal);
-  if(P.step==='review') return `<div class="pad"><div class="card"><span class="eyebrow">Review payment</span><dl class="kv"><dt>Location</dt><dd>${esc(L.name)}</dd><dt>Amount</dt><dd class="num"><b>${P.acct==='swipes'?'1 meal swipe':money(amt)}</b></dd><dt>From</dt><dd>${P.acct==='swipes'?`Meal swipes (${W.swipes} left)`:P.acct==='dd'?`Dining Dollars (${money(W.dd)})`:`Weaver Cash (${money(W.cash)})`}</dd></dl></div>
+  if(P.step==='review') return `<div class="pad"><div class="card"><span class="eyebrow">Review payment</span><dl class="kv"><dt>Location</dt><dd>${esc(L.name)}</dd><dt>Amount</dt><dd class="num"><b>${P.acct==='swipes'?'1 meal swipe':money(amt)}</b></dd><dt>From</dt><dd>${P.acct==='swipes'?`Meal swipes (${W.swipes} left)`:P.acct==='dd'?`Dining Dollars (${money(W.dd)})`:`Jacket Cash (${money(W.cash)})`}</dd></dl></div>
   <button type="button" class="btn block" data-act="payConfirm">Confirm and pay</button><button type="button" class="btn sec block" data-act="payBack">Edit</button></div>`;
   return `<form class="pad" data-form="pay"><div class="field"><label for="py-loc">Where</label><select id="py-loc" class="input" data-ch="payLoc">${Object.entries(DINING).map(([k,d])=>`<option value="${k}" ${k===P.loc?'selected':''}>${esc(d.name)}</option>`).join('')}</select></div>
-  <div class="field"><span class="flabel">Pay with</span><div class="seg">${[...(L.swipes?[['swipes','Swipe']]:[]),['dd','Dining $'],['cash','Weaver Cash']].map(([v,l])=>`<button type="button" class="${P.acct===v?'on':''}" data-act="payAcct" data-v="${v}">${l}</button>`).join('')}</div></div>
+  <div class="field"><span class="flabel">Pay with</span><div class="seg">${[...(L.swipes?[['swipes','Swipe']]:[]),['dd','Dining $'],['cash','Jacket Cash']].map(([v,l])=>`<button type="button" class="${P.acct===v?'on':''}" data-act="payAcct" data-v="${v}">${l}</button>`).join('')}</div></div>
   ${P.acct==='swipes'?`<p class="small muted">One swipe covers entry to ${esc(L.name)}. You have ${W.swipes} left this semester.</p>`:`<div class="field"><label for="py-amt">Amount</label><input id="py-amt" class="input num" type="number" step="0.01" min="0.01" inputmode="decimal" placeholder="0.00" value="${esc(P.amt)}" data-in="payAmt"><span class="tiny muted">Available: ${money(bal)}</span></div>`}
   <button class="btn block" type="submit" ${ok?'':'disabled'}>Review</button></form>`;
 }};
@@ -1149,7 +1149,7 @@ SCREENS.safety = {tab:'campus', title:'Safety', render(){
   return `<div class="pad"><button type="button" class="sos-big" data-go="safewalk">${ic('walk')}<span><b>${S.walk&&S.walk.step<4?'Safe Walk in progress':'Request a Safe Walk'}</b><span class="small">${S.walk&&S.walk.step<4?'Tap to see your escort':'A trained escort walks with you, 24/7'}</span></span></button>
   <div class="copyline"><span>Campus Safety 24/7 · (804) 555-0111</span><button type="button" class="btn sec sm" data-act="copy" data-v="(804) 555-0111">${ic('copy','sm')}Copy</button></div>
   ${secH('Alerts')}<div class="list">${S.alerts.slice().sort((a,b)=>(b.active-a.active)||b.ts-a.ts).map(a=>`<div class="row" style="align-items:flex-start"><span class="ibox ${a.sev==='urgent'?'brick':''}">${ic(a.sev==='resolved'?'check':'alert')}</span><span class="main"><span style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><span class="pill ${sevP[a.sev]}">${a.sev[0].toUpperCase()+a.sev.slice(1)}</span><span class="tiny muted">${ago(a.ts)} ago</span></span><span class="t" style="display:block;margin-top:4px">${esc(a.title)}</span><span class="s" style="display:block">${esc(a.body)}</span></span></div>`).join('')}</div>
-  <div class="card"><span class="eyebrow">Good to know</span><ul class="small" style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Blue-light phones are on every path around Wren Lake.</li><li>Residence halls lock at 10 PM; your Weaver ID opens your own hall.</li><li>The lakeside path is lit and patrolled until 2 AM.</li></ul></div></div>`;
+  <div class="card"><span class="eyebrow">Good to know</span><ul class="small" style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px"><li>Blue-light phones are on every path around Wren Lake.</li><li>Residence halls lock at 10 PM; your Jacket ID opens your own hall.</li><li>The lakeside path is lit and patrolled until 2 AM.</li></ul></div></div>`;
 }};
 const WALK_STEPS=['Request sent','Escort assigned','Escort on the way','Escort is with you','Arrived safely'];
 let walkT=[];
@@ -1274,7 +1274,7 @@ SCREENS.tips = {tab:'connect', title:'Peer tips', render(){
 SCREENS.me = {root:true, tab:'me', title:'Me', render(){
   const M=S.me;
   return `<div class="pad"><div class="card" style="align-items:flex-start">
-  <div style="display:flex;gap:14px;align-items:center;width:100%"><span class="av lg" style="--cc:var(--brick)">${initials(M.name)}</span><div style="flex:1;min-width:0"><div class="h2">${esc(M.name)}</div><div class="small muted">${esc(M.year)}</div></div><button type="button" class="btn sec sm" data-act="editProfile">${UI.editProfile?'Done':'Edit'}</button></div>
+  <div style="display:flex;gap:14px;align-items:center;width:100%"><span class="av lg" style="--cc:var(--brick-fg)">${initials(M.name)}</span><div style="flex:1;min-width:0"><div class="h2">${esc(M.name)}</div><div class="small muted">${esc(M.year)}</div></div><button type="button" class="btn sec sm" data-act="editProfile">${UI.editProfile?'Done':'Edit'}</button></div>
   ${UI.editProfile?`<form data-form="profile" style="display:flex;flex-direction:column;gap:10px;width:100%"><div class="field"><label for="pf-major">Major</label><input id="pf-major" name="major" class="input" value="${esc(M.major)}"></div><div class="field"><label for="pf-dorm">Residence</label><input id="pf-dorm" name="dorm" class="input" value="${esc(M.dorm)}"></div><div class="field"><label for="pf-bio">About me</label><textarea id="pf-bio" name="bio" class="input" style="min-height:70px">${esc(M.bio)}</textarea></div><button class="btn sm" type="submit">Save profile</button></form>`
   :`<dl class="kv"><dt>Major</dt><dd>${esc(M.major)}</dd><dt>Lives in</dt><dd>${esc(M.dorm)}</dd></dl><p class="small">${esc(M.bio)}</p>`}</div>
   <div class="card"><div class="sec-h"><span class="eyebrow">Interests</span><span class="tiny muted">Used for matching and event picks</span></div><div style="display:flex;flex-wrap:wrap;gap:6px">${INTEREST_POOL.concat(M.interests.filter(i=>!INTEREST_POOL.includes(i))).map(i=>`<button type="button" class="chip ${M.interests.includes(i)?'on':''}" data-act="interest" data-v="${esc(i)}" aria-pressed="${M.interests.includes(i)}">${esc(i)}</button>`).join('')}</div>
@@ -1326,8 +1326,8 @@ function header(def, t){
   const title = typeof def.title==='function' ? def.title(t.p||{}) : def.title;
   const bell = S.staff ? '' : `<button type="button" class="hbtn" data-go="notifs" aria-label="Notifications">${ic('bell')}<span id="bellbadge" class="badge-dot" ${unread()?'':'hidden'}>${unread()}</span></button>`;
   const dk=isDark(); const themeBtn=`<button type="button" class="hbtn" data-act="themeFlip" aria-label="Switch to ${dk?'light':'dark'} mode">${ic(dk?'sun':'moon')}</button>`;
-  if(t.s==='map') return `<div class="hdr-in"><button type="button" class="hbtn" data-back aria-label="Back">${ic('left')}</button><span class="brand">${CREST(28)}<span><b>Campus Life</b><small>Ashgrove University</small></span></span>${bell}</div>`;
-  if(t.s==='home') return `<div class="hdr-in"><span class="brand">${CREST(30)}<span><b>Campus Life</b><small>Ashgrove University</small></span></span>${themeBtn}${bell}</div>`;
+  if(t.s==='map') return `<div class="hdr-in"><button type="button" class="hbtn" data-back aria-label="Back">${ic('left')}</button><span class="brand">${CREST(28)}<span><b>Campus Life</b><small>weaver University</small></span></span>${bell}</div>`;
+  if(t.s==='home') return `<div class="hdr-in"><span class="brand">${CREST(30)}<span><b>Campus Life</b><small>weaver University</small></span></span>${themeBtn}${bell}</div>`;
   return `<div class="hdr-in ${S.staff?'staff':''}">${root?'':`<button type="button" class="hbtn" data-back aria-label="Back">${ic('left')}</button>`}<span class="htitle">${esc(title)}</span>${S.staff?'<span class="staff-flag">Staff</span>':''}${bell}</div>`;
 }
 function tabbar(def){
@@ -1337,8 +1337,8 @@ function tabbar(def){
 }
 function renderRail(){
   const cur=curTop().s;
-  $('#rail').innerHTML=`<div class="brand-r">${CREST(44)}<div><b>Ashgrove Campus Life</b><div class="small muted">Campus app prototype</div></div></div>
-  <p>Ashgrove University is a fictional liberal-arts campus of Gothic stone halls around Wren Lake, modeled on a Richmond, Virginia school. Home of the Weavers. Everything here runs on demo data.</p>
+  $('#rail').innerHTML=`<div class="brand-r">${CREST(44)}<div><b>weaver Campus Life</b><div class="small muted">Campus app prototype</div></div></div>
+  <p>weaver University is a fictional liberal-arts campus of Gothic stone halls around Wren Lake, modeled on a Richmond, Virginia school. Home of the Yellow Jackets. Everything here runs on demo data.</p>
   <ol>${FEATURES.map(([n,t,s,o])=>`<li><button type="button" class="${cur===s?'on':''}" data-act="feat" data-id="${s}"><span class="n">${String(n).padStart(2,'0')}</span><span style="flex:1">${t}</span></button></li>`).join('')}</ol>
   <button type="button" class="btn sec block staffbtn" data-act="${S.staff?'staffOff':'staffOn'}">${ic('swap','sm')}${S.staff?'Back to student view':'Open staff portal'}</button>`;
 }
@@ -1371,9 +1371,9 @@ function render(opts={}){
 function mountQR(){
   document.querySelectorAll('[data-qr]').forEach(el=>{
     const txt=el.dataset.qr; el.innerHTML='';
-    if(window.QRCode){ try{ new QRCode(el,{text:txt,width:180,height:180,colorDark:'#141B2D',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M}); return; }catch(e){} }
+    if(window.QRCode){ try{ new QRCode(el,{text:txt,width:180,height:180,colorDark:'#000000',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.M}); return; }catch(e){} }
     // fallback: deterministic pattern so the layout still reads as a code
-    const c=document.createElement('canvas'); c.width=c.height=180; const x=c.getContext('2d'); x.fillStyle='#fff'; x.fillRect(0,0,180,180); x.fillStyle='#141B2D';
+    const c=document.createElement('canvas'); c.width=c.height=180; const x=c.getContext('2d'); x.fillStyle='#fff'; x.fillRect(0,0,180,180); x.fillStyle='#000000';
     for(let i=0;i<21;i++) for(let j=0;j<21;j++){ const finder=(i<7&&j<7)||(i>13&&j<7)||(i<7&&j>13); const on=finder ? (i%6===0||j%6===0||(i%20>1&&i%20<5&&j%20>1&&j%20<5)||(i>15&&i<19&&j>1&&j<5)||(i>1&&i<5&&j>15&&j<19)||i===14||i===20||j===14||j===20) : hash(txt+i+'.'+j)%2; if(on) x.fillRect(6+i*8,6+j*8,8,8); }
     el.appendChild(c);
   });
@@ -1442,7 +1442,7 @@ const ACT = {
   jobTrack(d){ const j=JOB[d.id]; if(S.tasks.some(t=>t.job===j.id)){ toast('Already in your deadlines'); return; } const t={id:uid(),title:`Apply: ${j.title}, ${j.employer}`,course:'',type:'Application',due:j.due,remind:1440,done:false,job:j.id}; S.tasks.push(t); if(t.due-t.remind*60000<Date.now()) S.fired[t.id]=true; toast('Added to deadlines with a 1-day reminder'); render(); },
   // wallet
   payQR(){ if(UI.payQR){ UI.payQR=null; clearInterval(qrTimer); render(); return; } newPayQR(); },
-  addCash(d){ const v=+d.v; S.wallet.cash+=v; S.wallet.txns.push({loc:'Weaver Cash deposit',acct:'add',amt:v,ts:Date.now()}); toast(`Added ${money(v)} (demo)`); render(); },
+  addCash(d){ const v=+d.v; S.wallet.cash+=v; S.wallet.txns.push({loc:'Jacket Cash deposit',acct:'add',amt:v,ts:Date.now()}); toast(`Added ${money(v)} (demo)`); render(); },
   payAcct(d){ UI.pay.acct=d.v; render(); },
   payBack(){ UI.pay.step='form'; render(); },
   payConfirm(){ const P=UI.pay, W=S.wallet, amt=+P.amt; if(P.acct==='swipes') W.swipes--; else W[P.acct]=+(W[P.acct]-amt).toFixed(2); W.txns.push({loc:DINING[P.loc].name,acct:P.acct,amt:P.acct==='swipes'?1:amt,ts:Date.now()}); P.step='done'; render(); },

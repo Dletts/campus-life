@@ -1,6 +1,6 @@
 # Campus Life
 
-A clickable concept app for **Ashgrove University**, a fictional liberal-arts school (home of the Weavers). It runs entirely in the browser on demo data. No server, accounts or build step.
+A clickable concept app for **Ashgrove University**, a fictional liberal-arts school (home of the Yellow Jackets). It runs entirely in the browser on demo data. No server, accounts or build step.
 
 ## Run it
 
