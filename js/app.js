@@ -1337,8 +1337,8 @@ function tabbar(def){
 }
 function renderRail(){
   const cur=curTop().s;
-  $('#rail').innerHTML=`<div class="brand-r">${CREST(44)}<div><b>weaver Campus Life</b><div class="small muted">Campus app prototype</div></div></div>
-  <p>weaver University is a fictional liberal-arts campus of Gothic stone halls around Wren Lake, modeled on a Richmond, Virginia school. Home of the Yellow Jackets. Everything here runs on demo data.</p>
+  $('#rail').innerHTML=`<div class="brand-r">${CREST(44)}<div><b>Weaver University - Campus Life</b><div class="small muted">Campus app prototype</div></div></div>
+  <p>Weaver University is a fictional liberal-arts campus of Gothic stone halls around Wren Lake, modeled on the University of Richmond and is home of the Yellow Jackets. Everything here runs on demo data.</p>
   <ol>${FEATURES.map(([n,t,s,o])=>`<li><button type="button" class="${cur===s?'on':''}" data-act="feat" data-id="${s}"><span class="n">${String(n).padStart(2,'0')}</span><span style="flex:1">${t}</span></button></li>`).join('')}</ol>
   <button type="button" class="btn sec block staffbtn" data-act="${S.staff?'staffOff':'staffOn'}">${ic('swap','sm')}${S.staff?'Back to student view':'Open staff portal'}</button>`;
 }
